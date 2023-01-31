@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #042743;
+            color: #fff;
+        }
+        .container{
+            border: 2px solid red;
+            text-align: center;
+            width: 40%;
+            height: 200px;
+            margin: auto;
+            position: relative;
+            top: 160px;
+            border-radius: 10px;
+        }
+        input{
+            padding: 7px 40px;
+            color: black;
+            /* background-color: black; */
+        }
+        #btn{
+            padding: 7px 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p style="font-size: 2rem;">Find the Even and Odd number</p>
+    <input type="number" id="inp" placeholder="Enter the Number">
+    <button id="btn">Enter</button>
+    <h1></h1>
+</div>
+    
+</body>
+</html>
+
+<script>
+    let inp = document.getElementById("inp")
+    let btn = document.getElementById("btn")
+    let result = document.querySelector("h1")
+
+    btn.addEventListener("click",()=>{
+        if(inp.value % 2==0){
+            alert("This is even number")
+            result.innerHTML = "Even Number !"
+        }
+        else{
+            alert("This is odd number")
+            result.innerHTML= "Odd Number !"
+        }
+    })
+</script>
